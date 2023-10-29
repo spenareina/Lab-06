@@ -1,4 +1,4 @@
-
+# Sebastian Pena
 def encoder(string):
     result = ''
     for num in string:
