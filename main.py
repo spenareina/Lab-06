@@ -7,6 +7,13 @@ def encoder(string):
     return result
 
 
+def decoder(string_encoded):
+    result = ""
+    for num in string_encoded:
+        result += str((int(num) - 3) % 10)
+    return result
+
+
 def main():
     while True:
         print('Menu')
@@ -20,7 +27,7 @@ def main():
             print('Your password has been encoded and stored!')
             string_encoded = encoder(string)
         elif choice == "2":
-            print(f'The encoded password is {string_encoded}, and the original password is {string}.')
+            print(f'The encoded password is {string_encoded}, and the original password is {decoder(string_encoded)}.')
         elif choice == "3":
             break
         else:
